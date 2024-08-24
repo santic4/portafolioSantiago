@@ -51,10 +51,6 @@
   transition: all 0.3s ease;
 }
 
-.form-group .message-label {
-  margin-top: -4vh;
-}
-
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
