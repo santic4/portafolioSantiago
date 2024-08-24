@@ -72,7 +72,7 @@ function Contact() {
                         className='textarea-message'
                         required
                     ></textarea>
-                    <label htmlFor="message">Tu Mensaje</label>
+                    <label htmlFor="message" className='message-label'>Tu Mensaje</label>
                 </div>
                 <button className='btn-send' type="submit">Enviar</button>
             </form>

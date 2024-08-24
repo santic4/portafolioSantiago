@@ -30,7 +30,7 @@
 .form-group textarea {
   width: 100%;
   padding: 1vh;
-  font-size: 2vh;
+  font-size: 1.5vh;
   height: auto;
   color: #444;
   border-radius: 0.7vh;
@@ -49,6 +49,10 @@
   color: #999;
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+.form-group .message-label {
+  margin-top: -4vh;
 }
 
 .form-group input:focus + label,
@@ -119,4 +123,16 @@
     color: #444;
     border: 1px solid #ccc;
   }
+
+  .form-group label {
+    position: absolute;
+    top: 60%;
+    left: 0.8vh;
+    transform: translateY(-50%);
+    font-size: 1.4vh;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
 }
