@@ -1,0 +1,41 @@
+/* Resume */
+#resume {
+  background: linear-gradient(135deg, rgba(255, 100, 150, 0.3), rgba(100, 150, 255, 0.3));
+  text-align: center;
+  margin: 5vh 0 7vh;
+  width: 100%;
+  padding: 4vh 20vh;
+}
+
+#resume h2 {
+  font-size: 3vh;
+  color: white;
+  display: inline-block;
+  background-color: #222222;
+  border-radius: 5vh;
+  margin-bottom: 7vh;
+  padding: 0.2vh 2vh;
+  margin-bottom: 7vh;
+}
+
+#resume p {
+  font-size: 2vh;
+  color: #222222;
+  padding: 0vh 2vh;
+  margin-bottom: 7vh;
+}
+
+#resume a {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  margin: auto 2vh;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+#resume a:hover {
+  background: var(--accent-color);
+}

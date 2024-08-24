@@ -1,0 +1,102 @@
+#portfolio {
+  text-align: center;
+  width: 100%;
+  padding: 5vh 20vh;
+  background: linear-gradient(135deg, rgba(255, 100, 150, 0.3), rgba(100, 150, 255, 0.3));
+}
+
+#portfolio h2 {
+  font-size: 3vh;
+  background-color: #222222;
+  border-radius: 5vh;
+  padding: 0vh 2vh;
+  margin-bottom: 7vh;
+  color: white;
+  display: inline-block;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item { /* Fondo blanco para las tarjetas */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid var(--primary-color); /* Línea de color primario debajo de la imagen */
+}
+
+.portfolio-item h3 {
+  font-size: 2.5vh;
+  margin: 15px 0;
+  padding-left: 1.5vh;
+  color: #222222;
+}
+
+.portfolio-item p {
+  font-size: 1.7vh;
+  margin: 0 15px;
+  color: #222222;
+}
+
+/* Estilo Base para los Botones */
+.portfolio-item a {
+  display: inline-block;
+  font-size: 1.5vh;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid transparent; /* Inicialmente, el borde es transparente */
+  border-radius: 5px;
+  padding: 0.6vh 0.8vh;
+  margin: 2vh 1.5vh;
+  transition: all 0.3s ease; /* Transiciones suaves para todos los cambios */
+}
+
+/* Botón "Ver Proyecto" */
+.portfolio-item a:first-of-type {
+  background-color: #007bff; /* Color de fondo principal */
+  color: #fff; /* Color del texto */
+  border-color: #007bff; /* Color del borde */
+}
+
+.portfolio-item a:first-of-type:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Color del texto al pasar el cursor */
+  border-color: #0056b3; /* Color del borde al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+/* Botón "Ver Código" */
+.portfolio-item a:last-of-type {
+  background-color: #28a745; /* Color de fondo para el segundo botón */
+  color: #fff; /* Color del texto */
+  border-color: #28a745; /* Color del borde */
+}
+
+.portfolio-item a:last-of-type:hover {
+  background-color: #218838; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Color del texto al pasar el cursor */
+  border-color: #218838; /* Color del borde al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  #portfolio {
+    padding: 5vh 2vh;
+  
+  }
+  
+}

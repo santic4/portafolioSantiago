@@ -1,0 +1,66 @@
+/* Contact */
+#contact {
+  text-align: center;
+  margin: 5vh 0 7vh;
+  width: 100%;
+  padding: 4vh 20vh;
+}
+
+#contact h2 {
+  font-size: 3vh;
+  color: white;
+  display: inline-block;
+  background-color: #222222;
+  border-radius: 5vh;
+  margin-bottom: 7vh;
+  padding: 0.2vh 2vh;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 50vw;
+  color: white;
+  margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 15px;
+  height: auto;
+  margin-bottom: 20px;
+  color: #222222;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: #222222;
+  width: 100%;
+  resize: none;      
+  overflow: hidden;  
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease-in-out;
+}
+
+#contact .textarea-message{
+  min-height: 10vh;
+  max-height: auto;
+}
+
+#contact input:focus, #contact textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.btn-send {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 2vh;
+  border-radius: 0.5vh;
+  margin-top: 5vh;
+  transition: background 0.3s ease-in-out;
+  padding: 1vh 7vh;
+}
+
+.btn-send:hover {
+  background: var(--accent-color);
+}
+
