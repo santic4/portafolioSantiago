@@ -17,31 +17,59 @@
 
 #contact form {
   max-width: 50vw;
-  color: white;
+  color: #444;
   margin: 0 auto;
 }
 
-#contact input, #contact textarea {
+.form-group {
+  position: relative;
+  margin-bottom: 3vh;
+}
+
+.form-group input,
+.form-group textarea {
   width: 100%;
-  padding: 1.5vh;
+  padding: 1vh;
   font-size: 2vh;
   height: auto;
   color: #444;
-  border-radius: 8px;
+  border-radius: 0.7vh;
   border: 1px solid #ccc;
-  width: 100%;
-  resize: none;      
-  overflow: hidden;  
   box-sizing: border-box; 
   transition: border-color 0.3s ease-in-out;
+  background: none;
 }
 
-#contact .textarea-message{
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 1.5vh;
+  transform: translateY(-50%);
+  font-size: 1.4vh;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0.7vh;
+  left: 1.5vh;
+  font-size: 1.4vh;
+  color: var(--primary-color);
+  background-color: white; /* Ajusta según tu fondo */
+  padding: 0 0.5vh;
+}
+
+#contact .textarea-message {
   min-height: 10vh;
   max-height: auto;
 }
 
-#contact input:focus, #contact textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
   border-color: var(--primary-color);
 }
 
@@ -62,9 +90,8 @@
 }
 
 @media (max-width: 600px) {
-
   #contact {
-    margin: 5vh 0 7vh;
+    margin: 2vh 0;
     padding: 2vh 2vh;
   }
 
@@ -82,5 +109,14 @@
     max-width: 100vw;
     color: white;
     margin: 0 auto;
+  }
+
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 0.8vh;
+    font-size: 1.5vh;
+    color: #444;
+    border: 1px solid #ccc;
   }
 }

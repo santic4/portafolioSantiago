@@ -7,12 +7,12 @@ function Contact() {
         email: '',
         message: ''
     });
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -33,46 +33,46 @@ function Contact() {
             console.error('Error:', error);
         });
     };
-    
+
     return (
         <section id="contact">
             <h2>Contacto</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Tu Nombre</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Tu Nombre"
+                        placeholder=" "
                         value={formData.name}
                         onChange={handleChange}
                         required
                     />
+                    <label htmlFor="name">Tu Nombre</label>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email">Tu Correo</label>
                     <input
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Tu Correo"
+                        placeholder=" "
                         value={formData.email}
                         onChange={handleChange}
                         required
                     />
+                    <label htmlFor="email">Tu Correo</label>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="message">Tu Mensaje</label>
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Tu Mensaje"
+                        placeholder=" "
                         value={formData.message}
                         onChange={handleChange}
                         className='textarea-message'
                         required
                     ></textarea>
+                    <label htmlFor="message">Tu Mensaje</label>
                 </div>
                 <button className='btn-send' type="submit">Enviar</button>
             </form>
