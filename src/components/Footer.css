@@ -1,16 +1,17 @@
 /* Footer */
 footer {
+  width: 100%;
   color: #444;
   text-align: center;
-  padding: 3vh 20vh;
+  padding: 0vh 5vh;
 }
 
 footer .social-links {
-  margin-bottom: 15px;
+  margin-bottom: 1.6vh;
 }
 
 footer .social-links a {
-  margin: 0 10px;
+  margin: 0 1vh;
   color: #444;
   font-size: 2.2vh;
   transition: color 0.3s ease-in-out;

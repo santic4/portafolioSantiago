@@ -27,7 +27,7 @@
   background: linear-gradient(135deg, #ffffff, #f0f4f8);
   padding: 20px;
   border-left: 5px solid var(--primary-color);
-  border-radius: 10px;
+  border-radius: 1vh;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -35,12 +35,12 @@
 }
 
 .certification-item h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
   font-size: 2.3vh;
 }
 
 .certification-item p {
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
   font-size: 2vh;
   font-weight: 450;
   color: #444;
@@ -67,8 +67,13 @@
 
   .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2.3vh;
+  }
+
+  .certification-item {
+    padding: 1vh;
+    border-left: 3px solid var(--primary-color);
   }
   
 }

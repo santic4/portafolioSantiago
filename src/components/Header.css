@@ -76,6 +76,10 @@ header nav {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  header {
+    padding: 1.5vh 2vh;
+  }
+
   .hamburger {
     display: flex;
   }
