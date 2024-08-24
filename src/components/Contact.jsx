@@ -15,7 +15,6 @@ function Contact() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const form = e.target;
 
         fetch('https://formspree.io/f/xknlrvqa', {
             method: 'POST',
