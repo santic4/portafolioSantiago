@@ -1,8 +1,8 @@
 /* Footer */
 footer {
-  color: #222222;
+  color: #444;
   text-align: center;
-  padding: 4vh 20vh;
+  padding: 3vh 20vh;
 }
 
 footer .social-links {
@@ -11,8 +11,8 @@ footer .social-links {
 
 footer .social-links a {
   margin: 0 10px;
-  color: #222222;
-  font-size: 1.2rem;
+  color: #444;
+  font-size: 2.2vh;
   transition: color 0.3s ease-in-out;
 }
 
@@ -21,5 +21,5 @@ footer .social-links a:hover {
 }
 
 footer p {
-  font-size: 0.9rem;
+  font-size: 1.6vh;
 }

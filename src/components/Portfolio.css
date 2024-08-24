@@ -6,18 +6,18 @@
 }
 
 #portfolio h2 {
-  font-size: 3vh;
+  font-size: 2.7vh;
   background-color: #222222;
   border-radius: 5vh;
-  padding: 0vh 2vh;
-  margin-bottom: 7vh;
+  padding: 0.3vh 2vh;
+  margin-bottom: 5vh;
   color: white;
   display: inline-block;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 cards por fila en pantallas grandes */
   gap: 20px;
 }
 
@@ -37,28 +37,41 @@
 }
 
 .portfolio-item h3 {
-  font-size: 2.5vh;
-  margin: 15px 0;
+  font-size: 2.3vh;
+  margin: 0;
   padding-left: 1.5vh;
-  color: #222222;
+  color: #444;
 }
 
 .portfolio-item p {
   font-size: 1.7vh;
-  margin: 0 15px;
-  color: #222222;
+  margin: 1vh 1.5vh;
+  color: #444;
+  font-weight: 450;
+}
+
+.btn-proyects {
+  margin: 2vh 1.5vh; /* Ajuste del margen superior e inferior */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Cambia 'space-between' a 'space-around' para mejor ajuste en pantallas pequeñas */
 }
 
 /* Estilo Base para los Botones */
 .portfolio-item a {
-  display: inline-block;
+  display: flex; /* Usa flex para centrar el texto y mantener el botón en un solo bloque */
+  justify-content: center; /* Centra el contenido del botón */
+  align-items: center; /* Alinea el contenido verticalmente */
   font-size: 1.5vh;
   font-weight: bold;
+  width: 100%; /* Asegura que los botones ocupen todo el ancho del contenedor */
+  max-width: 200px; /* Opcional: limita el ancho máximo del botón */
+  text-align: center;
   text-decoration: none;
   border: 2px solid transparent; /* Inicialmente, el borde es transparente */
   border-radius: 5px;
-  padding: 0.6vh 0.8vh;
-  margin: 2vh 1.5vh;
+  padding: 0.6vh 1vh; /* Ajusta el padding para mejor presentación */
+  margin: 1vh 0; /* Ajuste del margen superior e inferior */
   transition: all 0.3s ease; /* Transiciones suaves para todos los cambios */
 }
 
@@ -90,13 +103,23 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
 }
 
-
 /* RESPONSIVE */
 @media (max-width: 600px) {
-
   #portfolio {
     padding: 5vh 2vh;
-  
   }
-  
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn-proyects { 
+    justify-content: center;
+  }
+
+  .portfolio-item a {
+    width: 100%; 
+    margin: 1vh 0;
+  }
+
 }

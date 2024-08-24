@@ -10,17 +10,17 @@ const projects = [
     repoUrl: 'https://github.com/tuusuario/proyecto1'
   },
   {
-    title: 'BL NEWS',
-    description: 'Plataforma interactiva de noticias y foro alimentado por una API de novedades: Información actualizada.',
-    imageUrl: 'contact-background.jpg',
-    liveUrl: 'https://blnews.netlify.app/',
-    repoUrl: 'https://github.com/tuusuario/proyecto1'
-  },
-  {
     title: 'Visión Online',
     description: 'Plataforma que ofrece servicios web.',
     imageUrl: 'portfolio-background.jpg',
     liveUrl: 'https://webvision.store/',
+    repoUrl: 'https://github.com/tuusuario/proyecto1'
+  },
+  {
+    title: 'BL NEWS',
+    description: 'Plataforma interactiva de noticias y foro alimentado por una API de novedades: Información actualizada.',
+    imageUrl: 'contact-background.jpg',
+    liveUrl: 'https://blnews.netlify.app/',
     repoUrl: 'https://github.com/tuusuario/proyecto1'
   },
   {
@@ -41,12 +41,18 @@ const Portfolio = () => {
       {projects.map((project, index) => (
           <div key={index} className="portfolio-item">
             <img src={project.imageUrl} alt={project.title} />
+            <div className='content-porta'>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            </div>
+
+            <div className='btn-proyects'>
             {project.liveUrl !== '#' && (
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
             )}
             <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">Ver Código</a>
+            </div>
+
           </div>
         ))}
       </div>

@@ -2,25 +2,23 @@
 
 #services {
   text-align: center;
-  margin: 5vh 0 7vh;
   width: 100%;
-  padding: 4vh 20vh;
+  padding: 5vh 20vh;
 }
 
 #services h2 {
-  font-size: 3vh;
-  display: inline-block;
+  font-size: 2.7vh;
   background-color: #222222;
   border-radius: 5vh;
-  margin-bottom: 7vh;
-  padding: 0.2vh 2vh;
+  padding: 0.3vh 2vh;
+  margin-bottom: 5vh;
   color: white;
+  display: inline-block;
 }
 
 .services-grid {
-  margin-top: 3vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2,1fr);
   gap: 30px;
 }
 
@@ -53,14 +51,16 @@
 
 .service-item h3 {
   margin-bottom: 15px;
-  font-size: 1.5rem;
-  color: #222222;
+  font-size: 2.3vh;
+  text-align: start;
+  color: #444;
 }
 
 .service-item p {
   text-align: start;
   font-size: 1.7vh;
-  color: #222222;
+  color: #444;
+  font-weight: 450;
   line-height: 1.4;
 }
 

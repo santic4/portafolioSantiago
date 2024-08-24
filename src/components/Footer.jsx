@@ -8,7 +8,7 @@ function Footer() {
         <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <p>&copy; {new Date().getFullYear()} [Tu Nombre]. Todos los derechos reservados.</p>
+      <p>&copy; {new Date().getFullYear()} Santiago Cañú. Todos los derechos reservados.</p>
     </footer>
   );
 }
