@@ -7,21 +7,21 @@ const projects = [
     description: 'Tienda en línea de productos digitales: órdenes, autorización, autenticación, metodos de pago ( PayPal, Mercado Pago y Tarjetas) , panel de administrador, correos electrónicos, diseño personalizado y depliegue en Cloud Server.',
     imageUrl: 'alfildigital.gif',
     liveUrl: 'https://alfildigital.com.ar',
-    repoUrl: 'https://github.com/tuusuario/proyecto1'
+    repoUrl: 'https://github.com/santic4/alfil-digital.git'
   },
   {
     title: 'Visión Online',
     description: 'Plataforma que ofrece servicios web.',
     imageUrl: 'visiononline.gif',
     liveUrl: 'https://webvision.store/',
-    repoUrl: 'https://github.com/tuusuario/proyecto1'
+    repoUrl: 'https://github.com/santic4/webSantiago.git'
   },
   {
     title: 'BL NEWS',
     description: 'Plataforma interactiva de noticias y foro alimentado por una API de novedades: Información actualizada.',
     imageUrl: 'blnews.gif',
     liveUrl: 'https://blnews.netlify.app/',
-    repoUrl: 'https://github.com/tuusuario/proyecto1'
+    repoUrl: 'https://github.com/santic4/BlNews.git'
   },
   {
     title: 'API REST',
