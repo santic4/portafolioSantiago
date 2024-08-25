@@ -5,28 +5,28 @@ const projects = [
   {
     title: 'ALFIL DIGITAL',
     description: 'Tienda en línea de productos digitales: órdenes, autorización, autenticación, metodos de pago ( PayPal, Mercado Pago y Tarjetas) , panel de administrador, correos electrónicos, diseño personalizado y depliegue en Cloud Server.',
-    imageUrl: 'fondo-portafolio.png',
+    imageUrl: 'alfildigital.gif',
     liveUrl: 'https://alfildigital.com.ar',
     repoUrl: 'https://github.com/tuusuario/proyecto1'
   },
   {
     title: 'Visión Online',
     description: 'Plataforma que ofrece servicios web.',
-    imageUrl: 'portfolio-background.jpg',
+    imageUrl: 'visiononline.gif',
     liveUrl: 'https://webvision.store/',
     repoUrl: 'https://github.com/tuusuario/proyecto1'
   },
   {
     title: 'BL NEWS',
     description: 'Plataforma interactiva de noticias y foro alimentado por una API de novedades: Información actualizada.',
-    imageUrl: 'contact-background.jpg',
+    imageUrl: 'blnews.gif',
     liveUrl: 'https://blnews.netlify.app/',
     repoUrl: 'https://github.com/tuusuario/proyecto1'
   },
   {
     title: 'API REST',
     description: 'Backend para eCommerce con estructura en capas que proporciona un sistema de gestión de productos, usuarios, pagos y pedidos, incluye chat en tiempo real entre clientes y vendedores, y cuenta con documentación del proyecto.',
-    imageUrl: 'services-background.jpg',
+    imageUrl: 'backend.jpeg',
     liveUrl: '#',
     repoUrl: 'https://github.com/santic4/api49980.git'
   },
