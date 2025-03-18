@@ -4,6 +4,23 @@
   padding: 10vh 20vh 0vh;
   min-height: 78vh;
   max-height: 78vh;
+  position: relative;
+  background-color: white;
+  background-image: 
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 6rem 4rem;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent);
+  z-index: -1; /* Asegura que el fondo no tape los demás contenidos */
 }
 
 .container-left{

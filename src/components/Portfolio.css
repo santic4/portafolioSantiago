@@ -7,7 +7,7 @@
 }
 
 #portfolio h2 {
-  font-size: 2.7vh;
+  font-size: 2.4vh;
   background-color: #222222;
   border-radius: 5vh;
   padding: 0.3vh 2vh;
@@ -18,92 +18,179 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards por fila en pantallas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
   gap: 20px;
 }
 
-.portfolio-item { /* Fondo blanco para las tarjetas */
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: start;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
+/* Estilo para un efecto masonry */
+.portfolio-item:nth-child(odd) {
+  grid-row: span 2; /* Hace que algunas tarjetas sean más grandes */
 }
 
+.portfolio-item { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  height: min-content;
+  width: auto;
+  border-radius: 0.2vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen con tamaño adaptable */
 .portfolio-item img {
   width: 100%;
   height: auto;
-  max-height: 25vh;
+  margin-bottom: 1vh;
   object-fit: cover;
-  border-bottom: 4px solid var(--primary-color); /* Línea de color primario debajo de la imagen */
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.btn-disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #ccc;
+  padding: 0.4vh 0.4vh;
+  margin: 1vh 0;
+  background-color: #ddd;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.6;
+  position: relative;
+}
+
+/* Contenedor del tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos del tooltip */
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  max-width: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 0.5vh;
+  border-radius: 5px;
+  font-size: 1.2vh;
+  position: absolute;
+  bottom: 120%; /* Ubicación arriba del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Flecha del tooltip */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Flecha apuntando hacia el botón */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Mostrar el tooltip cuando el mouse está sobre el contenedor */
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Carrusel horizontal en móviles */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
 }
 
 .portfolio-item h3 {
-  font-size: 2.3vh;
+  font-size: 2vh;
   margin: 0;
   padding-left: 1.5vh;
   color: #444;
 }
 
 .portfolio-item p {
-  font-size: 1.7vh;
+  font-size: 1.4vh;
   margin: 1vh 1.5vh;
   color: #444;
   font-weight: 450;
 }
 
 .btn-proyects {
-  margin: 2vh 1.5vh; /* Ajuste del margen superior e inferior */
+  margin: 0; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Cambia 'space-between' a 'space-around' para mejor ajuste en pantallas pequeñas */
+  justify-content: space-around;
 }
 
 /* Estilo Base para los Botones */
 .portfolio-item a {
-  display: flex; /* Usa flex para centrar el texto y mantener el botón en un solo bloque */
-  justify-content: center; /* Centra el contenido del botón */
-  align-items: center; /* Alinea el contenido verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;  
   font-size: 1.5vh;
   font-weight: bold;
-  width: 100%; /* Asegura que los botones ocupen todo el ancho del contenedor */
-  max-width: 200px; /* Opcional: limita el ancho máximo del botón */
+  width: 100%; 
   text-align: center;
   text-decoration: none;
-  border: 2px solid transparent; /* Inicialmente, el borde es transparente */
-  border-radius: 5px;
-  padding: 0.6vh 1vh; /* Ajusta el padding para mejor presentación */
-  margin: 1vh 0; /* Ajuste del margen superior e inferior */
-  transition: all 0.3s ease; /* Transiciones suaves para todos los cambios */
+  border: 2px solid transparent; 
+  padding: 0.4vh 0.4vh; 
+  margin: 1vh 0; 
+  padding: 0 2dvh;
+  transition: all 0.3s ease;
 }
 
 /* Botón "Ver Proyecto" */
 .portfolio-item a:first-of-type {
-  background-color: #007bff; /* Color de fondo principal */
-  color: #fff; /* Color del texto */
-  border-color: #007bff; /* Color del borde */
+  background-color: #ffffff;
+  color: #000000; 
 }
 
 .portfolio-item a:first-of-type:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el cursor */
-  color: #fff; /* Color del texto al pasar el cursor */
-  border-color: #0056b3; /* Color del borde al pasar el cursor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  background-color: #000000; 
+  color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Botón "Ver Código" */
 .portfolio-item a:last-of-type {
-  background-color: #28a745; /* Color de fondo para el segundo botón */
-  color: #fff; /* Color del texto */
-  border-color: #28a745; /* Color del borde */
+  color: #000000; 
 }
 
 .portfolio-item a:last-of-type:hover {
-  background-color: #218838; /* Color de fondo al pasar el cursor */
-  color: #fff; /* Color del texto al pasar el cursor */
-  border-color: #218838; /* Color del borde al pasar el cursor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  background-color: #000000; 
+  color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* RESPONSIVE */

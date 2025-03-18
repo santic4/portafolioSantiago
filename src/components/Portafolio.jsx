@@ -3,18 +3,26 @@ import './Portfolio.css';
 
 const projects = [
   {
+    title: 'SELLER SENDER',
+    description: 'Esta aplicación automatiza la postventa en Mercado Libre con webhooks. Cuando se concreta una venta, envía mensajes automáticos al comprador, incluyendo el link del producto.Desde el panel de administración, el usuario ve en tiempo real sus publicaciones, asigna mensajes personalizados y crea plantillas. Además, la app guarda los datos y marca las ventas como entregadas. Desarrollada con Node.js y Express, usa MongoDB para la base de datos, React y CSS en el frontend, y autenticación con Mercado Libre. Todo el proceso es 100% automatizado.',
+    imageUrl: 'backend-dev.webp',
+    liveUrl: 'https://sellersender.onrender.com',
+    repoUrl: 'https://github.com/santic4/SellerSender.git'
+  },
+  {
+    title: 'INDIS Indumentaria',
+    description: 'E-commerce de ropa desarrollado con React y Node.js. Incluye un carrito dinámico, checkout con Mercado Pago, cálculo de envío según ubicación, filtros avanzados de productos y un panel administrador para gestionar el negocio. El sitio está optimizado para SEO, integrado con Google Search Console y Google Analytics, y corre en un servidor en la nube con NGINX y PM2. Todo con un diseño responsive y funcionalidades modernas.',
+    imageUrl: 'gif-indis.gif',
+    liveUrl: 'https://indisindumentaria.com.ar',
+    repoUrl: 'https://github.com/santic4/api49980.git',
+    maintenance: true
+  },
+  {
     title: 'ALFIL DIGITAL',
     description: 'Tienda en línea de productos digitales: órdenes, autorización, autenticación, metodos de pago ( PayPal, Mercado Pago y Tarjetas) , panel de administrador, correos electrónicos, diseño personalizado y depliegue en Cloud Server.',
     imageUrl: 'alfildigital.gif',
     liveUrl: 'https://alfildigital.com.ar',
     repoUrl: 'https://github.com/santic4/alfil-digital.git'
-  },
-  {
-    title: 'Visión Online',
-    description: 'Plataforma que ofrece servicios web.',
-    imageUrl: 'visiononline.gif',
-    liveUrl: 'https://webvision.store/',
-    repoUrl: 'https://github.com/santic4/webSantiago.git'
   },
   {
     title: 'BL NEWS',
@@ -24,13 +32,12 @@ const projects = [
     repoUrl: 'https://github.com/santic4/BlNews.git'
   },
   {
-    title: 'API REST',
-    description: 'Backend para eCommerce con estructura en capas que proporciona un sistema de gestión de productos, usuarios, pagos y pedidos, incluye chat en tiempo real entre clientes y vendedores, y cuenta con documentación del proyecto.',
-    imageUrl: 'backend.jpeg',
-    liveUrl: '#',
-    repoUrl: 'https://github.com/santic4/api49980.git'
+    title: 'Visión Online',
+    description: 'Plataforma que ofrece servicios web.',
+    imageUrl: 'visiononline.gif',
+    liveUrl: 'https://webvision.store/',
+    repoUrl: 'https://github.com/santic4/webSantiago.git'
   },
-  // Añadir más proyectos aquí
 ];
 
 const Portfolio = () => {
@@ -47,10 +54,15 @@ const Portfolio = () => {
             </div>
 
             <div className='btn-proyects'>
-            {project.liveUrl !== '#' && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
-            )}
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">Ver Código</a>
+              {project.maintenance ? (
+                <div className="tooltip-container">
+                  <span className="btn-disabled">Ver Proyecto</span>
+                  <div className="tooltip">🚧 En mantenimiento 🚧</div>
+                </div>
+              ) : (
+                <a className='btn-proyects-a' href={project.liveUrl} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+              )}
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">Repositorio de GitHub</a>
             </div>
 
           </div>

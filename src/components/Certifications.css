@@ -36,12 +36,14 @@
 
 .certification-item h3 {
   margin-bottom: 1vh;
-  font-size: 1.8vh;
+  text-align: start;
+  font-size: 1.6vh;
 }
 
 .certification-item p {
   margin-bottom: 1vh;
-  font-size: 1.5vh;
+  font-size: 1.4vh;
+  text-align: start;
   font-weight: 450;
   color: #444;
 }
@@ -53,8 +55,24 @@
   font-size: 1.5vh;
 }
 
+.certification-item ul {
+  margin-top: 1vh;
+  font-size: 1.4vh;
+  text-align: start;
+}
+
 .certification-item a:hover {
   color: var(--accent-color);
+}
+
+.cert-in-progress ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cert-in-progress li {
+  font-weight: bold;
+  color: #555;
 }
 
 /* RESPONSIVE */

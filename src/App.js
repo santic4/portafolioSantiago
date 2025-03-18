@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, 
-      offset: 100, // desplazamiento desde el cual se dispara la animación
+      offset: 100, 
       once: true, 
     });
   }, []);
