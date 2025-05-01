@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className='App-body'>
       <Header />
       <Home />
       <Portfolio />

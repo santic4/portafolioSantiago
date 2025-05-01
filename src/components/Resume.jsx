@@ -8,8 +8,8 @@ const Resume = () => {
       <p>Descarga mi CV en PDF para conocer más sobre mi experiencia laboral y académica.</p>
 
       <div className='btn-resu'>
-      <a href="santiagocanucv.pdf" download>Descargar CV Español</a>
-      <a href="santiagocanucv.pdf" download>Download CV English</a>
+      <a href="Santiago_Cañu_CV.pdf" download>Descargar CV Español</a>
+      <a href="Santiago_Canu_CV_English.docx" download>Download CV English</a>
       </div>
     </section>
   );
